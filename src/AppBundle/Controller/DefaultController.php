@@ -11,8 +11,9 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+<<<<<<< HEAD
         $em = $this->getDoctrine()->getManager();
         $nb = $em->getRepository('GedBundle:Documents')->getNbDocuments();
 
@@ -22,5 +23,11 @@ class DefaultController extends Controller
         return $this->render('default/index.html.twig', array(
             'nb' => $nb)
         );
+=======
+        // replace this example code with whatever you need
+        return $this->render('default/index.html.twig', array(
+            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
+        ));
+>>>>>>> origin
     }
 }

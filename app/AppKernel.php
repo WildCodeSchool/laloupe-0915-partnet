@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
+<<<<<<< HEAD
             new UserBundle\UserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new GedBundle\GedBundle(),
@@ -24,6 +25,8 @@ class AppKernel extends Kernel
             new AnnuaireBundle\AnnuaireBundle(),
             new MsgBundle\MsgBundle(),
 
+=======
+>>>>>>> origin
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
