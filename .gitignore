@@ -8,4 +8,15 @@
 /bin/
 /composer.phar
 /vendor/
+<<<<<<< HEAD
+/node_modules/
+/app/uploads/
+.idea
+composer.lock
+/web/bundles
+/web/js
+/web/images
+/web/css
+=======
 /web/bundles/
+>>>>>>> origin

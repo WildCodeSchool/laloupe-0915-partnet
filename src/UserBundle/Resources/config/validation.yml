@@ -1,0 +1,37 @@
+UserBundle\Entity\User:
+    properties:
+        username:
+            - NotBlank: ~
+        plainPassword:
+            - NotBlank: ~
+        email:
+            - Email:
+                message: L'email "{{ value }}" n'est pas un email valide.
+                checkMX: true
+        prenom:
+            #- NotBlank: ~
+            - Length:
+                max: 50
+                maxMessage: "Le prenom ne peut contenir plus de 50 caractères"
+            - Type:
+                type: string
+                message: "Ce champ ne peut contenir que des caractères alphabétique"
+        nom:
+            #- NotBlank: ~
+            - Length:
+                max: 50
+                maxMessage: "Le nom ne peut contenir plus de 50 caractères"
+            - Type:
+                type: string
+                message: "Ce champ ne peut contenir que des caractères alphabétique"
+        file:
+            - File:
+                maxSize: 20M
+                mimeTypes: [image/*]
+                mimeTypesMessage: "Merci d'uploader un document pdf valid"
+
+        telephone:
+            - Regex:
+                pattern: '/^((\+|00)33\s?|0)[12345679](\s?\d{2}){4}$/'
+                match: true
+                message: Le numero de téléphone saisi est incorrect
